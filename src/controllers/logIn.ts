@@ -6,11 +6,14 @@ export const logIn = async (req: Request, res: Response) => {
     const { password, email } = req.body;
     const getUser = await Users.find({
       password, email,
-
     });
-    console.log(getUser)
     if (getUser.length > 0) {
-      const data = { name: getUser[0].name, email, last_name: getUser[0].last_name, _id: getUser[0]._id }
+      const data = {
+        name: getUser[0].name,
+        email,
+        last_name: getUser[0].last_name,
+        _id: getUser[0]._id
+      }
       res.status(200).json(data).end()
     }
     else {

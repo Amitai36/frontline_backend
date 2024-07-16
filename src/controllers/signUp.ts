@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import {Users } from "../db/schema";
+import { Users } from "../db/schema";
 
 export const signUp = async (req: Request, res: Response) => {
     try {
@@ -7,7 +7,6 @@ export const signUp = async (req: Request, res: Response) => {
         const getUser = await Users.find({
             email
         });
-        console.log(getUser)
         if (getUser.length === 0) {
             const add = new Users({
                 password,

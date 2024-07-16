@@ -9,8 +9,8 @@ const loginSchema = new Schema({
 });
 
 const emailsSchema = new Schema({
-    form: String,
-    to: [String],
+    from: String,
+    toUser: String,
     date: Number,
     subject: String,
     content: String,
