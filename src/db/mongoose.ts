@@ -2,8 +2,6 @@ import { mongoDBConnection } from "../config";
 import mongoose from "mongoose";
 const uri = mongoDBConnection;
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-
 export async function connectDB() {
   try {
     mongoose

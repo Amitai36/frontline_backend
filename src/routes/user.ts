@@ -1,6 +1,8 @@
 import { Router } from "express";
+import {  logIn } from "../controllers/logIn";
 
 const router = Router();
-// router.get("/getISSLocation", getISSLocation);
+router.post("/logIn", logIn);
+
 
 export default router;
