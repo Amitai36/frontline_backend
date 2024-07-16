@@ -8,7 +8,6 @@ export const logIn = async (req: Request, res: Response) => {
       password, email,
 
     });
-    console.log(getUser)
     if (getUser.length > 0) {
       const data = { name: getUser[0].name, email, last_name: getUser[0].last_name, _id: getUser[0]._id }
       res.status(200).json(data).end()

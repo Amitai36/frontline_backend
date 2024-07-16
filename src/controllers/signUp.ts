@@ -7,7 +7,6 @@ export const signUp = async (req: Request, res: Response) => {
         const getUser = await Users.find({
             email
         });
-        console.log(getUser)
         if (getUser.length === 0) {
             const add = new Users({
                 password,
